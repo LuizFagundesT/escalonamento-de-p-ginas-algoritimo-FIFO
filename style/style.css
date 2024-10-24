@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+body{
+    padding: 20px;
+    background-color: #f0f0d8;
+    font-family: "Roboto Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tabelas,td {
+    border: 1px solid black;
+}
+
+
+#getDados{
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    width: 400px;
+    padding: 15px;
+    border-radius: 16px;
+    background-color: #df8615;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+}
+
+#getDados input{
+    border-radius: 10px;
+    width: 44px;
+}
+
+#btnGeraSequencia{
+    border: 3px solid black;
+    border-radius: 16px;
+    width: 200px;
+    background-color: #55df15;
+    padding: 5px;
+    
+}
+
+#btnGeraSequencia:hover{
+
+    background-color: #55df1591;
+}
+
+#btnRequisitaPagina{
+    
+    border-radius: 16px;
+    width: 200px;
+    background-color: #55df15;
+    padding: 10px;
+
+}
+
+#btnRequisitaPagina:hover{
+
+    background-color: #55df1591;
+}
+
+#maquina{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #df8615;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 12px;
+    gap: 200px;
+    
+}
+
+
+
+
+#sequenciaRequisicoes{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #df8615;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 12px;
+}
+
+
+#explicacoes{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    background-color: #df8615;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 12px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFO</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    
+    <div id="explicacoes">
+        
+        <div id="contexto">
+            <h1>Explicação</h1>
+            <ul>
+                <li>O sistema se baseia no conceito de uma Memória virtual. Memória Virtual é uma técnica usada pelos sistemas operacionais para expandir a capacidade da memória RAM, permitindo que o sistema execute programas maiores do que a memória física disponível. Ela faz isso armazenando temporariamente partes de programas e dados no disco rígido, enquanto mantém em RAM apenas as partes que estão sendo ativamente usadas. Isso proporciona a ilusão de que o computador tem mais memória do que realmente possui. </li>
+                <li>
+                    Cabe ressaltar que a troca de páginas entre disco e memória (swapin) e memória-disco (swapout), e gerênciadas atavés de um algoritimo que tem uma politica própia para saber qual página ele vai desalocar da memória para que uma nova seja alocada, no caso a nova é a página que é requisitada. 
+                </li>
+                <li>
+                    Neste sistema utilizamos o algoritimo FIFO para demonstrar a troca de páginas entre a memória e o disco rígido. O FIFO adota a lógica de que a primeira página a ser alocada é a primeira a ter que ser desalocada, para que uma nova página que foi solicitada possa ser alocada. Vale dizer que em casos em que a página solicitada já estiver na memória não teremos a atuação do algorítimo.
+                </li>
+                
+                
+            </ul>
+        </div>
+
+        <div id = "passos">
+            <h1>Passo a passo para utilização: </h1>
+            <ol>
+                <li>Digite no campo "Quantas páginas serão simuladas?" a quantidade de páginas que seram alocadas no disco, vale dizer que através destas páginas o sistema gerará uma sequencia de requisicões (de maneira randomica) para a demonstração do algoritimo.</li>
+
+                <li>
+                    Digite no campo "Quantas requisições teremos?" o número de requisições/interações de solicitação serão feitas em função das páginas. Nisto teremos a quantidade que irá compor nossa sequência de demonstração do algorítimo. 
+                </li>
+                <li>
+                    Basta clicar no botão de gerar as requisições e neste clique será gerado a sequência de requisiçoes e também o disco com as páginas alocadas. Um botão surgira nomeado "Requisitar uma nova página". 
+                </li>
+                <li>
+                    Agora basta clicar no botão de requisição de uma nova página, a cada clique indica uma interação. Notará que a medida que as páginas são requisitas, elas são retiradas do disco e adicionadas a memória, e o processo inverso também é observado. 
+                </li>
+            </ol>
+        </div>
+       
+
+    </div>
+
+    <div id="getDados">
+        <label for="numPaginas">Quantas páginas serão simuladas?</label>
+        <input id = "numPaginas" type="number">
+        <label for="numInteracoes">Quantas requisições teremos? </label>
+        <input id = "numInteracoes" type="number">
+
+        <button id = "btnGeraSequencia">Gerar sequência de requisições</button>
+    </div>
+    <div id = "sequenciaRequisicoes">
+        <h1>Sequência das requisições</h1>
+    </div>
+
+    <div id="maquina">
+        <div id = "memoriaMain">
+            <h1>Memória Física</h1>
+        </div>
+    
+        <div id = "disco">
+            <div id="erros">
+                
+            </div>
+        </div>
+
+
+    </div>
+    <div id="RequisitaPagina">
+
+    </div>
+
+
+
+
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
